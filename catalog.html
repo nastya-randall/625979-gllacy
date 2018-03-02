@@ -43,5 +43,41 @@
             <a href="#">Сливочное</a>
           </div>
           <h1>Сливочное мороженое</h1>
-          
+          <form class="filter-form">
+              <label for="sorting-field">Сортировка:</label>
+              <select name="sort" id="sorting-field">
+                  <option value="popular">по популярности</option>
+                  <option value="cheap-first">сначала недорогие</option>
+                  <option value="expensive-first">сначала дорогие</option>
+                  <option value="fat-content">по жирности</option>
+              </select>
+              <label for="price-field">Цена: 100 руб. – 500 руб.</label>
+              <!-- range form             -->
+              <fieldset class="fat-content">
+                  <legend>Жирность:</legend>
+                  <input type="radio" name="fat-content" id="zero" value="0">
+                  <label for="zero">0%</label>
+                  <input type="radio" name="fat-content" id="less-than-10" value="1">
+                  <label for="less-than-10">до 10%</label>
+                  <input type="radio" name="fat-content" id="less-than-30" value="2">
+                  <label for="less-than-30">до 30%</label>
+                  <input type="radio" name="fat-content" id="more-than-30" value="3">
+                  <label for="more-than-30">выше 30%</label>
+              </fieldset>
+              <fieldset class="topping">
+                  <legend>Наполнители:</legend>
+                  <input type="checkbox" name="choco" id="choco" checked>
+                  <label for="choco">шоколадные</label>
+                  <input type="checkbox" name="sugar" id="sugar" checked>
+                  <label for="sugar">сахарные присыпки</label>
+                  <input type="checkbox" name="fruit" id="fruit">
+                  <label for="fruit">фрукты</label>
+                  <input type="checkbox" name="syrup" id="syrup">
+                  <label for="syrup">сиропы</label>
+                  <input type="checkbox" name="jem" id="jem">
+                  <label for="jem">джемы</label>                 
+              </fieldset>
+              <button class="filter-button" type="submit">Применить</button>
+              
+          </form>
       </main>
