@@ -6,14 +6,14 @@
   </head>
   <body>
       <header class="main-header">
-          <nav class="main-nav">
-              <a class="main-header-logo">
+          <a class="main-header-logo">
                   <img src="http://placehold.it/150x100" width="" height="" alt="Логотип Gllacy Shop">
               </a>
+          <nav class="main-nav">              
               <ul class="site-navigation">
                   <li><a href="catalog.html">Каталог</a>
                       <ul class="sub-menu">
-                          <li><a href="#">Новинки</a></li>
+                          <li class="sub-menu-news"><a href="#">Новинки</a></li>
                           <li><a href="#">Сливочное</a></li>
                           <li><a href="#">Щербеты</a></li>
                           <li><a href="#">Фруктовый лед</a></li>
@@ -23,25 +23,24 @@
                   <li><a href="#">Доставка и оплата</a></li>
                   <li><a href="#">О Компании</a></li>
               </ul>
-              <ul class="user-navigation">
-                  <li class="site-search">
-                      <form class="search-form">
-                          <label for="search-field">Поиск</label>
-                          <input type="search" name="search" id="search-field" placeholder="Что ищем?">
-                      </form>
-                  </li>
-                  <li class="login-link"><span>Вход</span>
-                      <form class="login-form">
-                          <input type="text" name="user-email" placeholder="Электронная почта">
-                          <input type="password" name="password" placeholder="Пароль">
-                          <button class="button" type="submit">Войти</button>
-                      </form>
-                      <a href="#">Забыли пароль?</a>
-                      <a href="#">Новая регистрация</a>
-                  </li>
-                  <li class="cart">Корзина Пусто</li>
-              </ul>
           </nav>
+          <div class="user-search">
+              <span class="search-trigger">Поиск</span>
+              <form class="search-form-hidden">
+                  <input type="search" name="search" placeholder="Что ищем?">
+              </form>
+          </div>
+          <div class="user-login">
+              <span class="login-trigger">Вход</span>
+              <form class="login-form-hidden">
+                  <input type="text" name="user-email" placeholder="Электронная почта">
+                  <input type="password" name="password" placeholder="Пароль">
+                  <button class="button" type="submit">Войти</button>
+                  <a href="#">Забыли пароль?</a>
+                  <a href="#">Новая регистрация</a>
+              </form>                      
+          </div>
+          <div class="user-cart">Корзина Пусто</div>              
           <p class="shop-info">
               <span class="shop-info-open">С 10 до 20, ежедневно</span>
               <span class="shop-info-phone">8 812 450-25-25</span>
@@ -49,28 +48,42 @@
       </header>
       
       <main class="container">
-          <section class="promo-slider">
-              <ul class="promo-slider-list">
-                  <li class="promo-slide">
-                      <span class="type-of-icecream">Крем-брюле и пломбир с малиновым джемом</span>
-                  </li>
-                  <li class="promo-slide">
-                      <span class="type-of-icecream">Шоколадный пломбир и лимонный сорбет</span>
-                  </li>
-                  <li class="promo-slide">
-                      <span class="type-of-icecream">Пломбир с помадкой и клубничный щербет</span>
-                  </li>
-              </ul>
-              <button class="button button-slider" type="submit">Давайте оба!</button>
+          
+          <section class="promo-gallery">
+              <div class="promo-slider">
+                <ul class="promo-slider-list">
+                    <li class="promo-slide">
+                        <span class="type-of-icecream">Крем-брюле и пломбир с малиновым джемом</span>
+                        <a class="button button-slider" href="#">Давайте оба!</a>
+                    </li>
+                    <li class="promo-slide">
+                        <span class="type-of-icecream">Шоколадный пломбир и лимонный сорбет</span>
+                        <a class="button button-slider" href="#">Давайте оба!</a>
+                    </li>
+                    <li class="promo-slide">
+                        <span class="type-of-icecream">Пломбир с помадкой и клубничный щербет</span>
+                        <a class="button button-slider" href="#">Давайте оба!</a>
+                    </li>
+                </ul>
+              </div>
+                <input type="radio" id="btn-1" name="toggle" checked>
+                <input type="radio" id="btn-2" name="toggle">
+                <input type="radio" id="btn-3" name="toggle">
+                <div class="slider-controls">
+                    <label for="btn-1"></label>
+                    <label for="btn-2"></label>
+                    <label for="btn-3"></label>
+                </div>                  
           </section>
+          
           <section class="promo-deals">
               <ul class="promo-deals-list">
-                  <li class="deal-berry">
+                  <li class="promo-deal deal-berry">
                       <h3>Малинка даром!</h3>
                       <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
                       <a class="button button-deal" href="#">Хочу варенье!</a>
                   </li>
-                  <li class="deal-choco">
+                  <li class="promo-deal deal-choco">
                       <h3>Шоколадки даром!</h3>
                       <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
                       <a class="button button-deal" href="#">Хочу шоколадки!</a>
@@ -80,25 +93,25 @@
           <section class="popular-catalog-items">
               <ul class="catalog-items">
                   <li class="catalog-item">
-                      <a class="item-link" href="#"><img src="http://placehold.it/150x100" width="" height=""></a>
+                      <img class="catalog-item-pic" src="http://placehold.it/150x100" width="" height="">
                       <span class="price">310 &#x584;</span><span class="mass-unit">/кг</span>
                       <a class="item-link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
                       <a class="button quick-view" href="#">Быстрый просмотр</a>  
                   </li>
                   <li class="catalog-item">
-                      <a class="item-link" href="#"><img src="http://placehold.it/150x100" width="" height=""></a>
+                      <img class="catalog-item-pic" src="http://placehold.it/150x100" width="" height="">
                       <span class="price">380 &#x584;</span><span class="mass-unit">/кг</span>
                       <a class="item-link" href="#">Сливочно-кофейное с кусочками шоколада</a>
                       <a class="button quick-view" href="#">Быстрый просмотр</a>
                   </li>
                   <li class="catalog-item">
-                      <a class="item-link" href="#"><img src="http://placehold.it/150x100" width="" height=""></a>
+                      <img class="catalog-item-pic" src="http://placehold.it/150x100" width="" height="">
                       <span class="price">355 &#x584;</span><span class="mass-unit">/кг</span>
-                      <a class="item-link" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>  
-                  </li>
-                  <a class="button quick-view" href="#">Быстрый просмотр</a>
+                      <a class="item-link" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+                      <a class="button quick-view" href="#">Быстрый просмотр</a>
+                  </li>                  
                   <li class="catalog-item">
-                      <a class="item-link" href="#"><img src="http://placehold.it/150x100" width="" height=""></a>
+                      <img class="catalog-item-pic" src="http://placehold.it/150x100" width="" height="">
                       <span class="price">415 &#x584;</span><span class="mass-unit">/кг</span>
                       <a class="item-link" href="#">Сливочное крем-брюле с карамельной подливкой</a>
                       <a class="button quick-view" href="#">Быстрый просмотр</a>
@@ -108,18 +121,10 @@
           <section class="features">
               <b>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</b>
               <ul class="features-list">
-                  <li class="feature-item">
-                      <p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
-                  </li>
-                  <li class="feature-item">
-                      <p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
-                  </li>
-                  <li class="feature-item">
-                      <p>Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
-                  </li>
-                  <li class="feature-item">
-                      <p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
-                  </li>
+                  <li class="feature-item">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
+                  <li class="feature-item">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</li>
+                  <li class="feature-item">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
+                  <li class="feature-item">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
               </ul>
           </section>
           
