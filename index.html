@@ -13,7 +13,7 @@
               <ul class="site-navigation">
                   <li><a href="catalog.html">Каталог</a>
                       <ul class="sub-menu">
-                          <li class="sub-menu-news"><a href="#">Новинки</a></li>
+                          <li class="sub-menu-new-products"><a href="#">Новинки</a></li>
                           <li><a href="#">Сливочное</a></li>
                           <li><a href="#">Щербеты</a></li>
                           <li><a href="#">Фруктовый лед</a></li>
@@ -24,17 +24,24 @@
                   <li><a href="#">О Компании</a></li>
               </ul>
           </nav>
-          <div class="user-search">
+          <div class="search">
               <span class="search-trigger">Поиск</span>
-              <form class="search-form-hidden">
-                  <input type="search" name="search" placeholder="Что ищем?">
+              <form class="search-form">
+                  <label for="search-field" class="visually-hidden">Поиск</label>
+                  <input type="search" name="search" id="search-field" placeholder="Что ищем?">
               </form>
           </div>
-          <div class="user-login">
+          <div class="login">
               <span class="login-trigger">Вход</span>
-              <form class="login-form-hidden">
-                  <input type="text" name="user-email" placeholder="Электронная почта">
-                  <input type="password" name="password" placeholder="Пароль">
+              <form class="login-form">
+                  <p class="login-field">
+                      <label for="login-email" class="visually-hidden">Электронная почта</label>
+                      <input type="text" name="user-email" id="login-email" placeholder="Электронная почта">
+                  </p>
+                  <p class="login-field">
+                      <label for="login-password" class="visually-hidden">Пароль</label>
+                      <input type="password" name="user-password" id="login-password" placeholder="Пароль">
+                  </p>
                   <button class="button" type="submit">Войти</button>
                   <a href="#">Забыли пароль?</a>
                   <a href="#">Новая регистрация</a>
@@ -66,32 +73,30 @@
                     </li>
                 </ul>
               </div>
-                <input class="toggle-active" type="radio" id="btn-1" name="toggle" checked>
-                <input type="radio" id="btn-2" name="toggle">
-                <input type="radio" id="btn-3" name="toggle">
-                <div class="slider-controls">
-                    <label for="btn-1"></label>
-                    <label for="btn-2"></label>
-                    <label for="btn-3"></label>
-                </div>                  
+              <div class="slider-toggles">
+                <button class="slider-toggle toggle-active" type="button" aria-label="Переключатель слайдера"></button>
+                <button class="slider-toggle" type="button" aria-label="Переключатель слайдера"></button>
+                <button class="slider-toggle" type="button" aria-label="Переключатель слайдера"></button>
+              </div>           
+                      
           </section>
           
           <section class="promo-deals">
               <h2 class="visually-hidden">Промо-акции</h2>
               <ul class="promo-deals-list">
-                  <li class="promo-deal deal-berry">
+                  <li class="promo-deals-item deal-berry">
                       <h3>Малинка даром!</h3>
                       <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
                       <a class="button button-deal" href="#">Хочу варенье!</a>
                   </li>
-                  <li class="promo-deal deal-choco">
+                  <li class="promo-deals-item deal-choco">
                       <h3>Шоколадки даром!</h3>
                       <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
                       <a class="button button-deal" href="#">Хочу шоколадки!</a>
                   </li>
               </ul> 
           </section>
-          <section class="popular-catalog-items">
+          <section class="catalog popular-items">
               <h2 class="visually-hidden">Популярные товары</h2>
               <ul class="catalog-items">
                   <li class="catalog-item">
@@ -124,10 +129,10 @@
               <h2 class="visually-hidden">Наши преимущества</h2>
               <b>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</b>
               <ul class="features-list">
-                  <li class="feature-item">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
-                  <li class="feature-item">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</li>
-                  <li class="feature-item">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
-                  <li class="feature-item">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
+                  <li class="features-item">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
+                  <li class="features-item">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</li>
+                  <li class="features-item">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
+                  <li class="features-item">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
               </ul>
           </section>
           
@@ -139,7 +144,8 @@
               <h2 class="visually-hidden">Подписка</h2>
               <p class="subscribe-text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
               <form class="subscribe-form">
-                  <input type="text" name="email" placeholder="Электронная почта">
+                  <label for="subscribe-field" class="visually-hidden">Электронная почта</label>
+                  <input type="text" name="email" id="subscribe-field" placeholder="Электронная почта">
                   <button class="button button-subscribe" type="submit">Отправить</button>
               </form>
           </section>
@@ -181,16 +187,25 @@
           </div>
       </footer>
       
-       <section class="modal modal-feedback-form">
+       <section class="modal modal-feedback">
            <h2 class="visually-hidden">Форма обратной связи</h2>
-              <p>Мы обязательно вам ответим!</p>
-              <form class="feedback-form">
-                  <input type="text" name="user-name" placeholder="Как вас зовут?">
-                  <input type="text" name="user-email" placeholder="Ваша почта для ответа?">
-                  <textarea name="user-message" rows="5">Напишите что-нибудь...</textarea>
-                  <button class="button button-feedback">Отправить</button>
+           <p>Мы обязательно вам ответим!</p>
+           <form class="feedback-form">  
+               <p class="feedback-form-item">
+                   <label for="feedback-user-name" class="visually-hidden">Имя пользователя</label>
+                   <input type="text" name="user-name" id="feedback-user-name" placeholder="Как вас зовут?">
+               </p>
+               <p class="feedback-form-item">
+                   <label for="feedback-user-email" class="visually-hidden">Электронная почта пользователя</label>   
+                   <input type="text" name="user-email" id="feedback-user-email" placeholder="Ваша почта для ответа?">
+               </p>
+               <p class="feedback-form-item">
+                   <label for="feedback-user-message" class="visually-hidden">Сообщение пользователя</label>
+                   <textarea name="user-message" rows="5" id="feedback-user-message">Напишите что-нибудь...</textarea>
+               </p>
+               <button class="button button-feedback" type="submit">Отправить</button>
               </form>
-              <span class="modal-close">Закрыть</span>
+              <button class="modal-close" type="button">Закрыть</button>
           </section>
     </body>
 </html>
