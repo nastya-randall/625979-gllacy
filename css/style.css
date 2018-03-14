@@ -113,7 +113,33 @@ a {
     border: 2px solid rgba(46, 136, 228, 0.52);
 }
 
+.login-form a {
+    font-size: 13px;
+    line-height: 24px;
+    color: #323232;
+}
+
+.login-form a:hover,
+.login-form a:focus,
+.login-form a:active {
+    color: #e84d37;
+}
+
+.shop-info {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+    text-align: right;
+}
+
+.shop-info-phone {
+    font-size: 22px;
+    line-height: 24px;
+}
+
 .button {
+    text-decoration: none;
+    outline: none;
     font: inherit;
     font-weight:700;
     color: #ffffff;
@@ -129,10 +155,9 @@ a {
 }
 
 .button:active {
-    outline: none;
     color: #fceeec;
     background-image: linear-gradient(to top, #f26843 0%, #e74a35 100%);
-    box-shadow: 0 2px 2px #942718;
+    box-shadow: inset 0 2px 2px #942718;
 }
 
 .button-login {
@@ -140,4 +165,51 @@ a {
     line-height: 24px;
     color: #fefefe;
     border-radius: 15px;
+}
+
+.button-slider {
+    text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+    font-size: 32px;
+    line-height: 44px;
+    box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+    border-radius: 25px;
+}
+
+.button-slider:hover,
+.button-slider:focus {
+    box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.button-slider:active {
+    color: #fceeec;
+    background-image: linear-gradient(to top, #f26843 0%, #e74a35 100%);
+    box-shadow: inset 0 2px 2px #942718;
+}
+
+.button-promo {
+    font-size: 18px;
+    line-height: 24px;
+    border-radius: 20px;
+}
+
+.promo-slider-list,
+.promo-list {
+    list-style: none;
+}
+
+.type-of-icecream {
+    font-size: 60px;
+    line-height: 60.35px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.promo-title {
+    font-size: 35px;
+    line-height: 41px;
+    font-weight:700;
+}
+
+.promo-berry {
+    background-image: url("/img/bg-berry.jpg");
 }
