@@ -160,7 +160,8 @@ a {
     box-shadow: inset 0 2px 2px #942718;
 }
 
-.button-login {
+.button-login,
+.quick-view {
     font-size: 18px;
     line-height: 24px;
     color: #fefefe;
@@ -192,6 +193,10 @@ a {
     border-radius: 20px;
 }
 
+.quick-view {
+    display: none;
+}
+
 .promo-slider-list,
 .promo-list {
     list-style: none;
@@ -210,6 +215,102 @@ a {
     font-weight:700;
 }
 
+.promo-list p {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700;
+}
+
 .promo-berry {
+    background-color: #720a1b;
     background-image: url("/img/bg-berry.jpg");
+    border-radius: 10px;
+}
+
+.promo-choco {
+    background-color: #3e2518;
+    background-image: url("/img/bg-choco.jpg");
+    border-radius: 10px;
+}
+
+.catalog-items {
+    list-style: none;
+}
+
+.catalog-item img {
+    border-radius: 50%;
+}
+
+.price-per-unit {
+    font-size: 45px;
+    line-height: 45px;
+    font-weight: 700;
+    text-shadow: 1px 1px 3px rgba(49, 50, 53, 0.5);
+}
+
+.item-unit {
+    font-size: 30px;
+}
+
+.item-link {
+    font-weight: 500px;
+    text-align: center;
+}
+
+.item-link:hover,
+.item-link:focus,
+.item-link:active {
+    color: #ffbc9e;
+}
+
+.catalog-item:hover,
+.catalog-item:focus {
+    background-color: rgba(254, 254, 254, 0.2);
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+}
+
+.catalog-item:hover .quick-view,
+.catalog-item:focus .quick-view {
+    display: inline-block;
+}
+
+.features {
+    color: #323232;
+    background-color: #f2e8d6;
+    background-image: url("/img/bg-waffle.jpg");
+}
+
+.features b {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 500;
+}
+.features-list {
+    list-style: none;
+}
+
+.blog-news{
+    background-color: #ffffff;
+    background-image: url("/img/bg-strawberry.jpg");
+    background-repeat: no-repeat;
+}
+
+.blog-news-title {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;
+    color: #323232;
+}
+
+.blog-news-link {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #323232;
+}
+
+.blog-news-link:hover,
+.blog-news-link:focus,
+.blog-news-link:active {
+    color: #e84d37;
 }
