@@ -29,14 +29,14 @@
             </nav>
             <div class="user-nav search">
               <span class="search-trigger">Поиск</span>
-              <form class="search-form">
+              <form class="form search-form">
                   <label for="search-field" class="visually-hidden">Поиск</label>
                   <input type="search" name="search" id="search-field" placeholder="Что ищем?">
               </form>
           </div>
           <div class="user-nav login">
               <span class="login-trigger">Вход</span>
-              <form class="login-form">
+              <form class="form login-form">
                   <p class="login-field">
                       <label for="login-email" class="visually-hidden">Электронная почта</label>
                       <input type="text" name="user-email" id="login-email" placeholder="Электронная почта">
@@ -50,7 +50,8 @@
                   <a href="#">Новая регистрация</a>
               </form>
           </div>
-          <div class="user-nav cart">Корзина Пусто</div>
+          <div class="user-nav cart" aria-label="Корзина">
+              <span class="cart-empty"></span>Пусто</div>
           <p class="shop-info">
               <span>С 10 до 20, ежедневно</span><br>
               <span class="shop-info-phone">8 812 450-25-25</span>
@@ -145,27 +146,29 @@
           </article>
           <section class="subscribe">
               <h2 class="visually-hidden">Подписка</h2>
-              <p class="subscribe-text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-              <form class="subscribe-form">
+              <div class="subscribe-container">
+                  <p class="subscribe-text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+                  <form class="form subscribe-form">
                   <label for="subscribe-field" class="visually-hidden">Электронная почта</label>
                   <input type="text" name="email" id="subscribe-field" placeholder="Электронная почта">
                   <button class="button button-subscribe" type="submit">Отправить</button>
-              </form>
+                  </form>
+              </div>
           </section>
           
           <section class="map-and-contacts">
               <h2 class="visually-hidden">Контактная информация</h2>
-              <img class="map-image" src="img/map.jpg" width="1200" height="430" alt="Адрес офлайн-магазина: ул. Большая Конюшенная 19/8, Санкт-Петербург">              
+              <img class="map-image" src="img/map.jpg" width="1200" height="430" alt="Адрес офлайн-магазина: ул. Большая Конюшенная 19/8, Санкт-Петербург">
               <div class="contacts">
-                <p class="contacts-font-small">Адрес главного офиса и офлайн-магазина:</p>
-                <b class="contacts-font-big">ул. Большая Конюшенная 19/8,<br> Санкт-Петербург</b>
-                <p class="contacts-font-big">Для заказов по телефону:</p>
-                <b class="contacts-font-big">8 812 450-25-25</b>
-                <p class="contacts-font-small">(с 10 до 20 ежедневно)</p>
-                <a class="feedback-form-link" href="#">Форма обратной связи</a>
-              </div>        
+                <p>Адрес главного офиса и офлайн-магазина:</p>
+                <span class="contacts-font-big">ул. Большая Конюшенная 19/8,<br> Санкт-Петербург</span>
+                <p>Для заказов по телефону:</p>
+                <span class="contacts-font-big phone-order">8 812 450-25-25</span>
+                <p>(с 10 до 20 ежедневно)</p>
+                <a class="button button-feedback" href="#">Форма обратной связи</a>
+              </div>
               
-          </section>          
+          </section>
                     
       </main>
       
@@ -185,15 +188,15 @@
           </ul>
                     
           <div class="footer-copyright">
-              <a class="copyright-link" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy-small.svg" width="108" height="39" alt="Логотип html academy"></a><br>
-              <span class="copyright-text">Сделано в <a class="copyright-link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>© 2017</span>   
+              <a class="copyright-link" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="108" height="39" alt="Логотип html academy"></a><br>
+              <span class="copyright-text">Сделано в <a class="copyright-link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017</span>
           </div>
       </footer>
       
        <section class="modal modal-feedback">
            <h2 class="visually-hidden">Форма обратной связи</h2>
-           <p>Мы обязательно вам ответим!</p>
-           <form class="feedback-form">  
+           <p class="feedback-motto">Мы обязательно вам ответим!</p>
+           <form class="form feedback-form">  
                <p class="feedback-form-item">
                    <label for="feedback-user-name" class="visually-hidden">Имя пользователя</label>
                    <input type="text" name="user-name" id="feedback-user-name" placeholder="Как вас зовут?">
@@ -204,7 +207,7 @@
                </p>
                <p class="feedback-form-item">
                    <label for="feedback-user-message" class="visually-hidden">Сообщение пользователя</label>
-                   <textarea name="user-message" rows="5" id="feedback-user-message">Напишите что-нибудь...</textarea>
+                   <textarea name="user-message" rows="5" id="feedback-user-message" placeholder="Напишите что-нибудь..."></textarea>
                </p>
                <button class="button button-feedback" type="submit">Отправить</button>
               </form>

@@ -29,14 +29,14 @@
             </nav>
             <div class="user-nav search">
                 <span class="search-trigger">Поиск</span>
-                <form class="search-form">
+                <form class="form search-form">
                     <label for="search-field" class="visually-hidden">Поиск</label>
                     <input type="search" name="search" id="search-field" placeholder="Что ищем?">
                 </form>
             </div>
           <div class="user-nav login">
               <span class="login-trigger">Вход</span>
-              <form class="login-form">
+              <form class="form login-form">
                   <p class="login-field">
                       <label for="login-email" class="visually-hidden">Электронная почта</label>
                       <input type="text" name="user-email" id="login-email" placeholder="Электронная почта">
@@ -45,31 +45,34 @@
                       <label for="login-password" class="visually-hidden">Пароль</label>
                       <input type="password" name="user-password" id="login-password" placeholder="Пароль">
                   </p>
-                  <button class="button" type="submit">Войти</button>
+                  <button class="button button-login" type="submit">Войти</button>
                   <a href="#">Забыли пароль?</a>
                   <a href="#">Новая регистрация</a>
-              </form>                      
+              </form>
           </div>
-          <div class="user-nav cart">Корзина <span class="items-number">2 Товара</span>
-              <ul class="cart-items-list">
-                  <li class="cart-item">
-                      <button class="cart-item-delete" type="button">Удалить</button>
-                      <img class="cart-item-pic" src="img/icecrem-small-1.jpg" alt="1" width="33" height="33">
-                      <span class="cart-item-name">Пломбир с апельсиновым джемом</span>
-                      <span class="quantity-and-price">1,5 кг х 200 руб.</span>
-                      <span class="cart-item-price">300 руб.</span>
-                   </li>
-                   <li class="cart-item">
-                       <button class="cart-item-delete" type="button">Удалить</button>
-                       <img class="cart-item-pic" src="img/icecrem-small-2.jpg" alt="1" width="33" height="33">
-                       <span class="cart-item-name">Клубничный пломбир с присыпкой из белого шоколада</span>
-                       <span class="quantity-and-price">1,5 кг х 300 руб.</span>
-                       <span class="cart-item-price">400 руб.</span>
-                   </li>
-                </ul>
-                <b class="total">Итого:</b>
-                <b class="price-otput">750 руб.</b>
-          </div>              
+          <div class="user-nav cart" aria-label="Корзина"><span class="cart-full">2 Товара</span>
+              <div class= cart-container>
+                  <ul class="cart-items-list">
+                      <li class="cart-item">
+                          <button class="cart-item-delete" type="button">Удалить</button>
+                          <img class="cart-item-pic" src="img/icecrem-small-1.jpg" alt="1" width="33" height="33">
+                          <span class="cart-item-name">Пломбир с апельсиновым джемом</span>
+                          <span class="quantity-and-price">1,5 кг х <span class="cart-unit-price">200 руб.</span></span>
+                          <span class="cart-item-price">300 руб.</span>
+                      </li>
+                      <li class="cart-item">
+                          <button class="cart-item-delete" type="button">Удалить</button>
+                          <img class="cart-item-pic" src="img/icecrem-small-2.jpg" alt="1" width="33" height="33">
+                          <span class="cart-item-name">Клубничный пломбир с присыпкой из белого шоколада</span>
+                          <span class="quantity-and-price">1,5 кг х <span class="cart-unit-price">300 руб.</span></span>
+                          <span class="cart-item-price">400 руб.</span>
+                      </li>
+                    </ul>
+                  <b class="total">Итого:</b>
+                  <b class="price-otput">750 руб.</b>
+                  <a class="button button-cart" href="#">Оформить заказ</a>
+              </div>
+            </div>
           <p class="shop-info">
               <span>С 10 до 20, ежедневно</span><br>
               <span class="shop-info-phone">8 812 450-25-25</span>
@@ -79,10 +82,11 @@
       <main class="container">
           <div class="breadcrumbs">
             <a href="index.html">Главная</a>
-            <a class="active" href="#">Каталог</a>
-            <a href="#">Сливочное</a>
-          </div>          
-          <h1>Сливочное мороженое</h1>          
+            <a href="#">Каталог</a>
+            <a class="breadcrumbs-current">Сливочное</a>
+          </div>
+          
+          <h1 class="catalog-title">Сливочное мороженое</h1>
           <form class="filter" method="get" action="https://echo.htmlacademy.ru">
               <p class="filter-item"><label for="sorting-field">Сортировка:</label>
               <select name="sort" id="sorting-field">
@@ -153,7 +157,7 @@
                       <a class="button quick-view" href="#">Быстрый просмотр</a>
                   </li>
                   <li class="catalog-item">
-                      <img class="catalog-item" src="img/icecream-6.jpg" width="267" height="267" alt="Мороженко">
+                      <img class="item-pic" src="img/icecream-6.jpg" width="267" height="267" alt="Мороженко">
                       <p class="price-per-unit"><span class="item-price">410 &#x584;</span><span class="item-unit">/кг</span></p>
                       <a class="item-link" href="#">Сливочно-черничное с цельными ягодами черники</a>
                       <a class="button quick-view" href="#">Быстрый просмотр</a>
@@ -224,8 +228,8 @@
           </ul>
                     
           <div class="footer-copyright">
-              <a class="copyright-link" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy-small.svg" width="108" height="39" alt="Логотип html academy"></a><br>
-              <span class="copyright-text">Сделано в <a class="copyright-link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>© 2017</span>   
+              <a class="copyright-link" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="108" height="39" alt="Логотип html academy"></a><br>
+              <span class="copyright-text">Сделано в <a class="copyright-link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017</span>
           </div>
       </footer>
     </body>
