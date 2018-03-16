@@ -168,7 +168,6 @@ span.cart-full {
 
 .cart-row {
     display: table-row;
-    list-style: none;
     font-size: 13px;
     line-height: 16px;
     border-bottom: 1px solid #cacac7;
