@@ -313,7 +313,7 @@ a {
     font-size: 18px;
     line-height: 24px;
     color: #fefefe;
-    border-radius: 15px;
+    border-radius: 20px;
     font-weight:700;
     background-image: linear-gradient(to top, #e74a35 0%, #f26843 100%);
     box-shadow: 0 2px 2px rgba(85, 8, 0, 0.52);
@@ -337,7 +337,7 @@ a {
     font-size: 32px;
     line-height: 44px;
     box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
-    border-radius: 25px;
+    border-radius: 30px;
 }
 
 .button-slider:hover,
@@ -494,7 +494,8 @@ a {
     margin-bottom: 40px;
 }
 
-.blog-news{
+.blog-news {
+    padding: 25px 20px;
     background-color: #ffffff;
     background-image: url("/img/bg-strawberry.jpg");
     background-repeat: no-repeat;
@@ -533,7 +534,8 @@ a {
     border-radius: 10px;
 }
 
-.subscribe-container{
+.subscribe-container {
+    padding: 30px 25px;
     background-color: #f8f7f4;
     border-radius: 10px;
 }
