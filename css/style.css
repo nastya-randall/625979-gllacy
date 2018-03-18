@@ -119,6 +119,7 @@ a {
 .cart-trigger {
     color: #323232;
     background-color: #f8f7f4;
+    border-radius: 12px;
 }
 
 .form {
@@ -180,21 +181,23 @@ a {
     line-height: 24px;
 }
 
-.cart-wrapper {
+.cart-table {
+    display: none;
+    padding: 20px 15px;
     background-color: #ffffff;
     color: #323232;
     border-radius: 3px;
     box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
 }
 
-.cart-wrapper b {
+.cart-trigger:hover + .cart-table {
+    display: table;
+}
+
+.cart-table b {
     font-size: 16px;
     line-height: 18px;
     font-weight: 700;
-}
-
-.cart-table {
-    display: table;
 }
 
 .cart-row {
@@ -225,6 +228,7 @@ a {
 }
 
 .breadcrumbs {
+    margin-bottom: 10px;
     font-size: 14px;
     line-height: 16px;
 }
@@ -235,21 +239,27 @@ a {
     color: #febca0;
 }
 
-.promo-slide-active
 .catalog-title {
+    margin: 0;
+    margin-bottom: 30px;
     font-size: 35px;
     line-height: 41px;
     font-weight: 700;
 }
 
+.filter {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .filter-item,
-.sort-type select,
 .filter-button {
+    margin-right: 15px;
     line-height: 18px;
     font-weight: 500;
     color: #ffffff;
     background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 15px;
+    border-radius: 30px;
     border: none;
 }
 
@@ -271,7 +281,13 @@ a {
     background-color: #ffffff;
 }
 
+.filter-topping {
+    margin-top: 38px;
+}
+
 .filter-button {
+    margin-top: 38px;
+    padding: 5px 30px;
     outline: none;
     border: 2px solid #ffffff;
 }
@@ -402,6 +418,7 @@ a {
 .catalog-items {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     list-style: none;
     padding: 0;
     margin-bottom: 40px;
@@ -410,6 +427,8 @@ a {
 .catalog-item {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
     width: 267px;
 }
 
@@ -540,6 +559,12 @@ a {
     line-height: 22px;
 }
 
+.paginator {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+}
+
 .paginator a {
     line-height: 18px;
     font-weight: 500;
@@ -567,7 +592,7 @@ a.paginator-current:focus {
     padding: 0 35px;
     font-size: 13px;
     line-height: 18px;
-    font-weight:
+    border-top: 1px solid rgba(255, 255, 255, 0.3)
 }
 
 .heart {
