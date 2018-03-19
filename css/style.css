@@ -43,6 +43,7 @@ a {
 .main-footer ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .main-menu-link {
@@ -365,6 +366,7 @@ a {
 .promo-list {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 
@@ -421,6 +423,7 @@ a {
     flex-wrap: wrap;
     list-style: none;
     padding: 0;
+    margin: 0;
     margin-bottom: 40px;
 }
 
@@ -485,6 +488,7 @@ a {
 }
 .features-list {
     list-style: none;
+    margin: 0;
     padding: 25px 20px;
 }
 
