@@ -8,7 +8,12 @@
         <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
-        <header class="main-header container">
+        <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
+        <input class="visually-hidden" type="radio" id="product-2" name="toggle">
+        <input class="visually-hidden" type="radio" id="product-3" name="toggle">
+        <div class="site-wrapper">
+            <div class="container">
+        <header class="main-header">
             <a class="main-header-logo">
                 <img src="img/Logo.svg" width="154" height="64" alt="Логотип Gllacy Shop">
             </a>
@@ -61,28 +66,26 @@
 
         <main class="main-page container">
             <h1 class="visually-hidden">Магазин мороженого «Глейси»</h1>
-            <section class="promo-sliders-gallery">
-                <div class="promo-slider">
-                    <ul class="promo-slider-list">
-                        <li class="promo-slide promo-slide-active">
-                        <span class="type-of-icecream">Крем-брюле и пломбир с малиновым джемом</span>
+            <section class="slider">
+                <div class="slider-toggles">
+                    <label for="product-1">Слайд 1</label>
+                    <label for="product-2">Слайд 2</label>
+                    <label for="product-3">Слайд 3</label>
+                </div>
+                <ul class="slider-list">
+                        <li class="slider-item" id="slide1">
+                        <h3 class="slide-title">Крем-брюле и пломбир с малиновым джемом</h3>
                         <a class="button button-slider" href="#">Давайте оба!</a>
                         </li>
-                        <li class="promo-slide">
-                        <span class="type-of-icecream">Шоколадный пломбир и лимонный сорбет</span>
+                        <li class="slider-item" id="slide2">
+                        <h3 class="slide-title">Шоколадный пломбир и лимонный сорбет</h3>
                         <a class="button button-slider" href="#">Давайте оба!</a>
                         </li>
-                        <li class="promo-slide">
-                        <span class="type-of-icecream">Пломбир с помадкой и клубничный щербет</span>
+                        <li class="slider-item" id="slide3">
+                        <h3 class="slide-title">Пломбир с помадкой и клубничный щербет</h3>
                         <a class="button button-slider" href="#">Давайте оба!</a>
                         </li>
                     </ul>
-                </div>
-                <div class="slider-toggles">
-                    <button class="slider-toggle toggle-active" type="button" aria-label="Перейти на слайд 1">Слайд 1</button>
-                    <button class="slider-toggle" type="button" aria-label="Перейти на слайд 2">Слайд 2</button>
-                    <button class="slider-toggle" type="button" aria-label="Перейти на слайд 3">Слайд 3</button>
-                </div>
             </section>
             <section class="promo">
                 <h2 class="visually-hidden">Промоакции</h2>
@@ -208,5 +211,7 @@
             </form>
             <button class="modal-close" type="button">Закрыть</button>
         </section>
+            </div>
+        </div>
     </body>
 </html>
