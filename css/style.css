@@ -636,6 +636,8 @@ a {
 }
 
 .button-promo {
+    margin-left: auto;
+    margin-top: auto;
     font-size: 18px;
     line-height: 24px;
     border-radius: 20px;
@@ -652,38 +654,41 @@ a {
     padding: 0;
     margin: 0;
     list-style: none;
-    
 }
 
 .promo-title {
     margin: 0;
+    margin-bottom: 15px;
     font-size: 35px;
     line-height: 41px;
     font-weight:700;
 }
 
 .promo-list p {
+    margin: 0;
     font-size: 18px;
     line-height: 22px;
     font-weight: 700;
 }
 
 .promo-item {
+    display: flex;
+    flex-direction: column;
     box-sizing: border-box;
     width: 560px;
+    min-height: 229px;
     padding: 20px;
+    border-radius: 15px;
 }
 
 .promo-berry {
     background-color: #720a1b;
     background-image: url("../img/bg-berry.jpg");
-    border-radius: 10px;
 }
 
 .promo-choco {
     background-color: #3e2518;
     background-image: url("../img/bg-choco.jpg");
-    border-radius: 10px;
 }
 
 .catalog-items {
