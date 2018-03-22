@@ -70,7 +70,7 @@ a {
     align-items: center;
     position: relative;
     padding-top: 9px;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
 }
 
 .main-header-logo {
@@ -272,7 +272,6 @@ a {
     z-index: 5;
 }
 
-
 .login-form {
     display: none;
     position: absolute;
@@ -351,6 +350,9 @@ a {
     box-sizing: border-box;
     width: 117px;
     height: 32px;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 20px;
 }
@@ -370,21 +372,63 @@ a {
     background-position: 0 0;
 }
 
+.cart-full {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: 0;
+    padding-left: 44px;
+    box-sizing: border-box;
+    width: 117px;
+    height: 32px;
+    color: #323232;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+    background-color: #f8f7f4;
+    border-radius: 20px;
+}
+
+.cart-full::before {
+    content: "";
+    left: 16px;
+    top: 6px;
+
+    position: absolute;
+
+    width: 21px;
+    height: 20px;
+    
+    background-image: url("../img/cart-full.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
 .cart-wrapper {
     display: none;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    top: 36px;
+    right: 0;
     padding: 20px 15px;
+    box-sizing: border-box;
+    width: 540px;
     background-color: #ffffff;
     color: #323232;
     border-radius: 3px;
     box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+
+    z-index: 10;
+}
+
+.cart-trigger:hover + .cart-wrapper {
+    display: flex;
 }
 
 .cart-table {
     display: table;
-}
-
-.cart-trigger:hover + .cart-wrapper {
-    display: table;
+    border-bottom: 1px solid #cacac7;
 }
 
 .total-price {
@@ -394,10 +438,10 @@ a {
 }
 
 .cart-row {
-    display: table-row;
+    display: block;
+    padding-bottom: 20px;
     font-size: 13px;
     line-height: 16px;
-    border-bottom: 1px solid #cacac7;
 }
 
 .cart-cell {
@@ -427,7 +471,7 @@ a {
 .slider {
     position: relative;
     margin-bottom: 40px;
-    padding-top: 310px;
+    padding-top: 295px;
     text-align: center;
     color: #ffffff;
 }
@@ -455,7 +499,7 @@ a {
 
 .slider-toggles {
     position: absolute;
-    bottom: 63px;
+    bottom: 20px;
     left: 0;
     z-index: 10;
 
@@ -510,9 +554,21 @@ a {
 }
 
 .breadcrumbs {
+    display: inline-block;
     margin-bottom: 10px;
     font-size: 14px;
     line-height: 16px;
+}
+
+.breadcrumbs a {
+    position: relative;
+    padding-right: 20px;
+}
+
+.breadcrumbs a::after {
+    content: "»";
+    position: absolute;
+    right: 5px;
 }
 
 .breadcrumbs a:hover,
@@ -523,7 +579,7 @@ a {
 
 .catalog-title {
     margin: 0;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     font-size: 35px;
     line-height: 41px;
     font-weight: 700;
@@ -536,7 +592,13 @@ a {
 
 .filter-item,
 .filter-button {
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    height: 36px;
+    margin: 0;
     margin-right: 15px;
+    padding: 7px 15px;
     line-height: 18px;
     font-weight: 500;
     color: #ffffff;
@@ -546,25 +608,164 @@ a {
 }
 
 .filter-item legend {
+    position: absolute;
+    top: -23px;
     font-size: 14px;
     line-height: 16px;
     font-weight: 500;
 }
 
-.sort-type {
+.filter-sort select {
     border: none;
+    border-radius: 0;
+    box-shadow: none;
+    background: transparent;
+    color: #ffffff;
+    appearance: none;
 }
-.sort-type select:hover,
-.sort-type select:focus {
+.filter-sort select:hover,
+.filter-sort select:focus {
     color: #323232;
 }
 
-.sort-type select:active {
+.filter-sort select:active {
     background-color: #ffffff;
 }
 
+.filter-price {
+    width: 220px;
+}
+
+.range-controls {
+    position: relative;
+}
+
+.range-controls .scale {
+    margin: 10px 7px;
+    height: 4px;
+    background-color: rgba(248, 247, 244, 0.5);
+}
+
+.range-controls .bar {
+    margin-left: 16px;
+    width: 107px;
+    height: 4px;
+
+    background: #f8f7f4;
+}
+
+.range-toggle {
+    position: absolute;
+    top: -9px;
+
+    width: 4px;
+    height: 4px;
+
+    background: #ababab;
+    border: 8px solid #f8f7f4;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.range-toggle-min {
+  left: 16px;
+}
+
+.range-toggle-max {
+  left: 123px;
+}
+
+.filter-fat label {
+    position: relative;
+    margin-right: 17px;
+    padding-left: 32px;
+}
+
+.filter-fat label:last-child {
+    margin-right: 0;
+}
+
+.filter-fat input:enabled + label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    box-sizing: border-box;
+    padding: 4px;
+    width: 22px;
+    height: 22px;
+    border: 3px solid #ffffff;
+    background-clip: content-box;
+    border-radius: 50%;
+    opacity: 0.8;
+}
+
+.filter-fat input:disabled + label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    box-sizing: border-box;
+    padding: 4px;
+    width: 22px;
+    height: 22px;
+    border: 3px solid #ffffff;
+    background-clip: content-box;
+    border-radius: 50%;
+    opacity: 0.4;
+}
+
+.filter-fat input:checked + label::before {
+    background-color: #ffffff;
+}
 .filter-topping {
     margin-top: 38px;
+}
+
+.filter-topping label {
+    position: relative;
+    margin-right: 20px;
+    padding-left: 33px;
+    vertical-align: middle;
+}
+
+.filter-topping label:last-child {
+    margin-right: 0;
+}
+
+.filter-topping input:enabled + label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    box-sizing: border-box;
+    width: 26px;
+    height: 24px;
+    background-image: url("../img/checkbox-off.svg");
+    background-repeat: no-repeat;
+    background-position: left;
+    opacity: 0.8;
+}
+
+.filter-topping input:disabled + label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    box-sizing: border-box;
+    width: 26px;
+    height: 24px;
+    background-image: url("../img/checkbox-off.svg");
+    background-repeat: no-repeat;
+    background-position: left;
+    opacity: 0.4;
+}
+
+
+.filter-topping input:checked + label::before {
+    background-image: url("../img/checkbox-on.svg");
+}
+
+
+.filter .filter-fat label:hover::before,
+.filter .filter-topping label:hover::before {
+    opacity: 1;
 }
 
 .filter-button {
@@ -621,7 +822,7 @@ a {
 }
 
 .button-slider {
-    padding: 15px 42px;
+    padding: 12px 43px;
     color: #ffffff;
     text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
     text-align: center;
