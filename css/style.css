@@ -766,6 +766,7 @@ a {
 }
 .filter-topping {
     margin-top: 38px;
+    margin-right: 15px;
     padding-left: 15px;
     padding-right: 18px;
 }
@@ -1065,7 +1066,7 @@ a {
 .features {
     margin-top: 40px;
     margin-bottom: 40px;
-    padding: 25px 20px;
+    padding: 24px 20px;
     color: #323232;
     background-color: #f2e8d6;
     background-image: url("../img/bg-waffle.jpg");
@@ -1074,7 +1075,7 @@ a {
 
 .features b {
     display: inline-block;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
     font-size: 24px;
     line-height: 30px;
     font-weight: 500;
@@ -1245,14 +1246,14 @@ a {
 .paginator {
     display: flex;
     justify-content: flex-end;
-    margin-top: 80px;
+    margin-top: 83px;
     margin-bottom: 30px;
     min-width: 190px;
     height: 26px;
 }
 
 .paginator a {
-    margin-right: 3px;
+    margin-right: 2px;
     padding: 0 9px;
     line-height: 26px;
     font-weight: 500;
@@ -1266,7 +1267,7 @@ a {
     padding-right: px;
     background-image: url("../img/icon-right-small.svg");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: right;
     transform: rotate(180deg);
     opacity: 0.2;
 }
@@ -1274,9 +1275,10 @@ a {
 .paginator-next {
     font-size: 0;
     margin-left: 3px;
+    margin-right: 0;
     background-image: url("../img/icon-right-small.svg");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: right;
 }
 
 .paginator a:not([class^="paginator-"]):hover,
