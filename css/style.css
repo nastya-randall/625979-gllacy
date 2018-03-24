@@ -428,7 +428,7 @@ a {
 }
 
 .cart-wrapper {
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: flex-end;
     position: absolute;
@@ -1046,6 +1046,11 @@ a {
     text-shadow: 1px 1px 3px rgba(49, 50, 53, 0.5);
 }
 
+.item-currency {
+    background-image: url("../img/ruble.svg");
+    
+}
+
 .item-unit {
     font-size: 30px;
 }
@@ -1426,17 +1431,105 @@ a.paginator-current:focus {
 }
 
 .modal-feedback {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 120px;
+    left: 50%;
+    
+    margin-left: -239px;
+    padding: 20px 25px;
+    box-sizing: border-box;
+    width: 478px;
+    box-sizing: border-box;
     background-color: #f8f7f4;
     border-radius: 5px;
+    
+    z-index: 15;
 }
 
 .feedback-motto {
+    margin: 0;
+    margin-bottom: 20px;
     font-size: 24px;
     line-height: 28px;
     font-weight: 500;
     color: #323232;
 }
 
+.modal-feedback p {
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 18px;
+    height: 18px;
+    
+    font-size: 0;
+
+    border: 0;
+
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.modal-close::before,
+.modal-close::after {
+    content: "";
+
+    position: absolute;
+    top: 8px;
+    left: 0px;
+
+    width: 19px;
+    height: 2px;
+
+    background-color: #231f20;
+}
+
+.modal-close::before {
+    transform: rotate(45deg);
+}
+
+.modal-close::after {
+    transform: rotate(-45deg);
+}
+
+.feedback-form-item  input[type="text"] {
+    width: 267px;
+}
+
+.feedback-form-item textarea {
+    margin-bottom: 25px;
+    padding-top: 15px;
+    width: 428px;
+    min-height: 155px;
+    box-sizing: border-box;
+    resize: none;
+}
+
+.button-feedback {
+    display: block;
+    width: auto;
+    margin-left: auto;
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 14;
+
+}
 .promo-slide:not(.promo-slide-active) {
 
 }
@@ -1445,5 +1538,5 @@ a.paginator-current:focus {
  
 }
 .modal {
-    display: none;
+    display: fixed;
 }
