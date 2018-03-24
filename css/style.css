@@ -71,7 +71,7 @@ a {
     align-items: center;
     position: relative;
     padding-top: 9px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .main-header-logo {
@@ -87,10 +87,10 @@ a {
 .site-nav {
     display: flex;
     flex-wrap: wrap;
-    align-items: ;
     padding: 0;
     margin: 0;
-    margin-left: 8px;
+    margin-left: 10px;
+    margin-bottom: 5px;
     list-style: none;
 }
 
@@ -185,6 +185,7 @@ a {
 
 .user-nav {
     margin-right: 10px;
+    margin-bottom: 3px;
 }
 
 .search {
@@ -211,7 +212,7 @@ a {
 .login-trigger {
     display: flex;
     align-items: center;
-    padding: 0 16px;
+    padding: 0 17px;
     width: 93px;
     height: 32px;
     box-sizing: border-box;
@@ -485,7 +486,7 @@ a {
 
 .shop-info {
     position: absolute;
-    top: 75px;
+    top: 73px;
     right: 0;
     margin: 0;
     font-size: 14px;
@@ -497,14 +498,16 @@ a {
 }
 
 .shop-info-phone {
+    display: inline-block;
+    margin-top: 4px;
     font-size: 22px;
     line-height: 24px;
 }
 
 .slider {
     position: relative;
-    margin-bottom: 40px;
-    padding-top: 295px;
+    margin-bottom: 41px;
+    padding-top: 300px;
     text-align: center;
     color: #ffffff;
 }
@@ -522,7 +525,7 @@ a {
 .slide-title {
     width: 680px;
     margin: 0 auto;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 
     font-size: 60px;
     line-height: 60px;
@@ -589,14 +592,14 @@ a {
 
 .breadcrumbs {
     display: inline-block;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     font-size: 14px;
     line-height: 16px;
 }
 
 .breadcrumbs span {
     position: relative;
-    padding-right: 20px;
+    padding-right: 18px;
 }
 
 .breadcrumbs span::after {
@@ -635,8 +638,8 @@ a {
     box-sizing: border-box;
     height: 36px;
     margin: 0;
-    margin-right: 15px;
-    padding: 7px 15px;
+    margin-right: 18px;
+    padding: 7px 12px;
     line-height: 18px;
     font-weight: 500;
     color: #ffffff;
@@ -671,7 +674,8 @@ a {
 }
 
 .filter-price {
-    width: 220px;
+    width: 215px;
+    padding-left: 14px;
 }
 
 .range-controls {
@@ -706,30 +710,33 @@ a {
 }
 
 .range-toggle-min {
-  left: 16px;
+  left: 20px;
 }
 
 .range-toggle-max {
-  left: 123px;
+  left: 120px;
 }
 
 .filter-fat label {
     display: inline-block;
-    vertical-align: middle;
+
     position: relative;
-    margin-right: 17px;
+    vertical-align: middle;
+    line-height: 22px;
+    margin-right: 16px;
     padding-left: 32px;
 }
 
 .filter-fat label:last-child {
     margin-right: 0;
+    margin-left: -3px;
 }
 
 .filter-fat input + label::before {
     content: "";
     position: absolute;
     left: 0;
-    top: -2px;
+    top: 0;
     box-sizing: border-box;
     padding: 4px;
     width: 22px;
@@ -759,13 +766,16 @@ a {
 }
 .filter-topping {
     margin-top: 38px;
+    padding-left: 15px;
+    padding-right: 18px;
 }
 
 .filter-topping label {
     position: relative;
-    margin-right: 20px;
+    margin-right: 16px;
     padding-left: 33px;
     vertical-align: middle;
+    line-height: 22px;
 }
 
 .filter-topping label:last-child {
@@ -777,11 +787,12 @@ a {
     position: absolute;
     left: 0;
     box-sizing: border-box;
-    width: 26px;
-    height: 24px;
+    width: 24px;
+    height: 20px;
     background-image: url("../img/checkbox-off.svg");
     background-repeat: no-repeat;
-    background-position: left;
+    background-size: contain;
+    background-position: center;
     opacity: 0.8;
 }
 
@@ -790,17 +801,19 @@ a {
     position: absolute;
     left: 0;
     box-sizing: border-box;
-    width: 26px;
-    height: 24px;
+    width: 24px;
+    height: 20px;
     background-image: url("../img/checkbox-off.svg");
+    background-size: contain;
     background-repeat: no-repeat;
-    background-position: left;
+    background-position: center;
     opacity: 0.4;
 }
 
 
 .filter-topping input:checked + label::before {
     background-image: url("../img/checkbox-on.svg");
+    background-position: 2px;
 }
 
 .filter .filter-fat label:hover::before,
@@ -841,7 +854,7 @@ a {
 
 .button {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 9px 22px 13px 20px;
     text-decoration: none;
     border: none;
     font: inherit;
@@ -874,7 +887,7 @@ a {
 }
 
 .button-slider {
-    padding: 12px 43px;
+    padding: 10px 41px;
     color: #ffffff;
     text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
     text-align: center;
@@ -903,8 +916,14 @@ a {
     border-radius: 20px;
 }
 
+.button-subscribe {
+    padding-left: 17px;
+    padding-right: 20px;
+}
+
 .button-feedback {
     width: 100%;
+    margin-top: 25px;
 }
 
 .promo-list {
@@ -936,7 +955,7 @@ a {
     box-sizing: border-box;
     width: 560px;
     min-height: 229px;
-    padding: 20px;
+    padding: 16px 21px 22px 19px;
     border-radius: 15px;
 }
 
@@ -1018,8 +1037,8 @@ a {
 
 .price-per-unit {
     margin: 0;
-    margin-top: -60px;
-    margin-bottom: 20px;
+    margin-top: -58px;
+    margin-bottom: 21px;
     font-size: 45px;
     line-height: 45px;
     font-weight: 700;
@@ -1050,17 +1069,18 @@ a {
     color: #323232;
     background-color: #f2e8d6;
     background-image: url("../img/bg-waffle.jpg");
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
 .features b {
+    display: inline-block;
+    margin-bottom: 20px;
     font-size: 24px;
     line-height: 30px;
     font-weight: 500;
 }
 .features-list {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
     list-style: none;
     margin: 0;
@@ -1069,14 +1089,19 @@ a {
 
 .features-item {
     position: relative;
-    margin-top: 20px;
+    margin-bottom: 23px;
     padding-left: 57px;
     flex-basis: 533px;
     box-sizing: border-box;
 }
 
-.features-item:first-child {
+.features-item:nth-child(2n-1) {
     margin-right: 33px;
+}
+
+.features-item:last-child,
+.features-item:nth-last-child(2) {
+    margin-bottom: 0;
 }
 
 .features-item:before {
@@ -1118,18 +1143,19 @@ a {
     background-color: #ffffff;
     background-image: url("../img/bg-strawberry.jpg");
     background-repeat: no-repeat;
-    background-position: 170px -20px;
-    border-radius: 10px;
+    background-position: 173px -25px;
+    border-radius: 12px;
 }
 
 .blog-news,
 .subscribe {
     box-sizing: border-box;
     width: 560px;
+    min-height: 220px;
 }
 .blog-news-title {
     margin: 0;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     padding: 0;
     font-size: 16px;
     line-height: 22px;
@@ -1138,7 +1164,7 @@ a {
 }
 
 .blog-news-link {
-    width: 280px;
+    width: 285px;
     font-size: 24px;
     line-height: 30px;
     font-weight: 700;
@@ -1157,18 +1183,21 @@ a {
     padding: 5px;
     color: #5a5a5a;
     background-image: repeating-linear-gradient(-45deg, #f8f7f4 0px, #f8f7f4 10px, #94cefd 10px, #94cefd 20px, #f8f7f4 20px, #f8f7f4 30px, #fc9e92 30px, #fc9e92 40px);
+    background-position: -6px;
     border-radius: 10px;
 }
 
 .subscribe-container {
-    padding: 30px 25px;
+    min-height: 210px;
+    box-sizing: border-box;
+    padding: 30px 22px;
     background-color: #f8f7f4;
     border-radius: 10px;
 }
 
 .subscribe-container p {
     margin: 0;
-    margin-bottom: 35px;
+    margin-bottom: 36px;
     padding: 0;
 }
 
@@ -1182,15 +1211,24 @@ a {
 .contacts {
     position: absolute;
     right: 0;
-    top: 50px;
+    top: 63px;
     padding: 30px 25px;
     box-sizing: border-box;
     width: 302px;
-    font-size: 14px;
-    line-height: 20px;
     color: #323232;
     background-color: #fffffe;
-    border-radius: 10px;
+    border-radius: 12px;
+}
+
+.contacts p {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    line-height: 20px
+}
+
+.contacts p:first-child {
+    margin-bottom: 18px;
 }
 
 .contacts-font-big {
@@ -1200,7 +1238,8 @@ a {
 }
 
 .phone-order {
-    line-height: 22px;
+    line-height: 30px;
+    
 }
 
 .paginator {
@@ -1258,9 +1297,9 @@ a.paginator-current:focus {
 
 .main-footer {
     display: flex;
-    justify-content: space-between;
+    align-items: flex-end;
     margin: 0;
-    padding: 20px 0;
+    padding: 12px 0;
     font-size: 13px;
     line-height: 18px;
 }
@@ -1328,16 +1367,21 @@ a.paginator-current:focus {
 .footer-links {
     display: flex;
     flex-wrap: wrap;
-    align-content: center;
 
+    margin-left: 235px;
+    margin-top: 2px;
     box-sizing: border-box;
     width: 325px;
 }
 
 .footer-links li {
-    margin-bottom: 5px;
+    margin-bottom: 4px;
     width: 50%;
     box-sizing: border-box;
+}
+
+.footer-links li:nth-child(2n) {
+    margin-left: -20px;
 }
 
 .heart {
@@ -1365,6 +1409,7 @@ a.paginator-current:focus {
 }
 
 .footer-copyright {
+    margin-left: auto;
     height: 60px;
 }
 
