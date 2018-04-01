@@ -11,7 +11,8 @@ body {
 
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
-input[type="radio"].visually-hidden {
+input[type="radio"].visually-hidden,
+label.visually-hidden {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -279,7 +280,7 @@ a {
 
 .form input,
 .form textarea {
-    height: 42px;
+    height: 44px;
     padding: 0 15px;
     -webkit-box-shadow: inset 0 0 0 1px #d3d3d2;
     box-shadow: inset 0 0 0 1px #d3d3d2;
@@ -371,7 +372,7 @@ a {
 .login-links {
     position: absolute;
     left: 141px;
-    bottom: 25px;
+    bottom: 20px;
 }
 
 .login-form a {
@@ -982,7 +983,7 @@ a {
 
 .filter-button:active {
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     height: 36px;
     background-color: #ededed;
     -webkit-box-shadow: inset 0 2px 1px #696969;
@@ -1010,7 +1011,7 @@ a {
     background-image: -o-linear-gradient(bottom, #e74a35 0%, #f26843 100%);
     background-image: linear-gradient(to top, #e74a35 0%, #f26843 100%);
     -webkit-box-shadow: 0 2px 2px rgba(85, 8, 0, 0.52);
-            box-shadow: 0 2px 2px rgba(85, 8, 0, 0.52);
+    box-shadow: 0 2px 2px rgba(85, 8, 0, 0.52);
     cursor: pointer;
 }
 
@@ -1033,6 +1034,14 @@ a {
     background-image: linear-gradient(to top, #f26843 0%, #e74a35 100%);
     -webkit-box-shadow: inset 0 2px 2px #942718;
     box-shadow: inset 0 2px 2px #942718;
+}
+
+.button-login {
+    padding-top: 10px;
+    padding-bottom: 11px;
+    height: 44px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .button-slider {
@@ -1075,6 +1084,7 @@ a {
 .button-subscribe {
     padding-left: 17px;
     padding-right: 20px;
+    padding-bottom: 10px;
 }
 
 .button-feedback {
